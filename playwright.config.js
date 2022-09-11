@@ -36,7 +36,7 @@ const config = {
     // channel: 'chrome',
     // launchOptions: {
     // 	executablePath: '/tmp/chromium',
-    // 	headless: true,
+    headless: false,
     // 	args: [
     // 		'--allow-no-sandbox-job',
     // 		'--no-sandbox',

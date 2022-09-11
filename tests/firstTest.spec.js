@@ -9,16 +9,20 @@ test.describe('Basic Test Functionality:20', () => {
     await expect(title).toHaveText('Playwright');
     const name = 'test123';
     const email = 'test123@gmail.com';
-    const path = testInfo.outputPath('landingpage.png');
+    const pathone = testInfo.outputPath('landingpageone.png');
     await page.screenshot({
-      path,
+      pathone,
+    });
+    const pathtwo = testInfo.outputPath('landingpagetwo.png');
+    await page.screenshot({
+      pathtwo,
     });
     testInfo.attachments.push({
       name: {
         SuperAdminName: name,
         SuperAdminEmail: email,
         name: 'landinPageScreenshot',
-        path,
+        pathone,
         contentType: 'image/png',
       },
       contentType: 'application/json',
@@ -28,7 +32,7 @@ test.describe('Basic Test Functionality:20', () => {
         testSuperAdminName: name,
         testSuperAdminEmail: email,
         name: 'testlandinPageScreenshot',
-        path,
+        pathtwo,
         contentType: 'image/png',
       },
       contentType: 'application/json',
